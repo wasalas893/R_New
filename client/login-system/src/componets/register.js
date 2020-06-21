@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 
 import {Grid,
     Form,
-    Segment,
+
     Button,
     Header,
     Message,
-    Icon } from 'semantic-ui-react';
+ } from 'semantic-ui-react';
 
 class register extends React.Component{
     state={
@@ -37,7 +37,7 @@ class register extends React.Component{
     })
     .catch(err=>{
     console.error(err);
-    this.setState({ errors:this.state.errors.concat(err),loading:false });
+        
     })
 };
     
@@ -50,14 +50,14 @@ class register extends React.Component{
         const { username,email,password}=this.state;
         return(
             <Grid textAlign="center" verticalAlign="middle" className="app">
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" icon color="green" textAlign="center">
-            <Icon name="users" color="green" />
-                   Register
+           <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as="h2"  textAlign="center">
+        
+             Register 
           </Header>
 
           <Form onSubmit={this.handleSubmit} size="large" >
-            <Segment stacked>
+           
               <Form.Input
                 fluid
                 name="username"
@@ -89,7 +89,7 @@ class register extends React.Component{
               <Button  color="primary" fluid size="large">
                 Submit
               </Button>
-            </Segment>
+          
           </Form>
           <Message>
             Already a user? <Link to="/login">Login</Link>
