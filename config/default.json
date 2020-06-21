@@ -1,5 +1,6 @@
 {
-    "mongoURI":"mongodb://localhost/next"
+    "mongoURI":"mongodb://localhost",
+    "jwtSecret": "mysecrettoken"
     
 }
 
