@@ -20,6 +20,7 @@ class register extends React.Component{
     };
 
    
+//connet the firebase
 
     handleSubmit=event=>{
         event.preventDefault();
@@ -47,7 +48,9 @@ class register extends React.Component{
     }
 
     render(){
+
         const { username,email,password}=this.state;
+        
         return(
             <Grid textAlign="center" verticalAlign="middle" className="app">
            <Grid.Column style={{ maxWidth: 450 }}>
